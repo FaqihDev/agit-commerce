@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="jatis-snapshot" />
+      <option name="name" value="Jatis Snapshots Repository" />
+      <option name="url" value="http://nexus.jatis.com/content/repositories/jatis-snapshot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jatis-core-release" />
+      <option name="name" value="Jatis Core Release Repository" />
+      <option name="url" value="http://nexus.jatis.com/content/repositories/jatis-core-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jatis-nexus" />
+      <option name="name" value="Jatis Maven Repository" />
+      <option name="url" value="http://nexus.jatis.com/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jatis-release" />
+      <option name="name" value="Jatis Release Repository" />
+      <option name="url" value="http://nexus.jatis.com/content/repositories/jatis-release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-central" />
+      <option name="name" value="maven central" />
+      <option name="url" value="http://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ZK CE" />
+      <option name="name" value="ZK CE Repository" />
+      <option name="url" value="http://mavensync.zkoss.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ZK EVAL" />
+      <option name="name" value="ZK Evaluation Repository" />
+      <option name="url" value="http://mavensync.zkoss.org/eval" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jatis-3rdparty" />
+      <option name="name" value="Jatis 3rd Party Repository" />
+      <option name="url" value="http://nexus.jatis.com/content/repositories/jatis-3rdparty/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="com.asual.maven.public" />
+      <option name="name" value="Asual Public Repository" />
+      <option name="url" value="http://www.asual.com/maven/content/groups/public" />
+    </remote-repository>
+  </component>
+</project>
