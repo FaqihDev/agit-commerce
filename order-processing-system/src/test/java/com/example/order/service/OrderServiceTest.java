@@ -73,6 +73,25 @@ class OrderServiceTest {
     }
 
     @Test
+    void createOrder_InsufficientStock() {
+        CreateOrderRequest request = new CreateOrderRequest();
+        request.setUserId("user1");
+        OrderItemRequest itemReq = new OrderItemRequest();
+        itemReq.setProductId(1L);
+        itemReq.setQuantity(10);
+        request.setItems(List.of(itemReq));
+
+        Product mockProduct = new Product();
+        mockProduct.setId(1L);
+        mockProduct.setPrice(new BigDecimal("100.00"));
+        mockProduct.setStock(5);
+
+        when(productService.getProductById(1L)).thenReturn(mockProduct);
+
+        assertThrows(BusinessException.class, () -> orderService.createOrder(request));
+    }
+
+    @Test
     void getOrderById_Success() {
         Order order = new Order();
         order.setId(UUID.randomUUID());

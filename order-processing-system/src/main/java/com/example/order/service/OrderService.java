@@ -42,10 +42,13 @@ public class OrderService {
         
         // Validation: product exists
         for (OrderItemRequest item : request.getItems()) {
+            Product product = productService.getProductById(item.getProductId());
             if (item.getQuantity() <= 0) {
                 throw new BusinessException(ResponseCodeEnum.INVALID_QUANTITY);
             }
-            Product product = productService.getProductById(item.getProductId());
+            if (product.getStock() < item.getQuantity()) {
+                throw new BusinessException(ResponseCodeEnum.INSUFFICIENT_STOCK);
+            }
             totalAmount = totalAmount.add(product.getPrice().multiply(new BigDecimal(item.getQuantity())));
         }
 
