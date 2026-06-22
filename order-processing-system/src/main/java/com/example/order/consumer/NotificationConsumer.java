@@ -33,6 +33,7 @@ public class NotificationConsumer {
         try {
             Order order = orderService.getOrderById(message.getOrderId());
             String text = "Order #" + order.getId() + " berhasil dibayar";
+            log.info(text);
             notificationService.createNotification(order.getUserId(), text);
             channel.basicAck(tag, false);
         } catch (Exception e) {
@@ -47,6 +48,7 @@ public class NotificationConsumer {
         try {
             Order order = orderService.getOrderById(message.getOrderId());
             String text = "Order #" + order.getId() + " gagal diproses";
+            log.info(text);
             notificationService.createNotification(order.getUserId(), text);
             channel.basicAck(tag, false);
         } catch (Exception e) {
